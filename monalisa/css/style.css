@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg-darkest-green:  #094c29;
+    --bg-green: #0e7f47;
+    --bg-light-green: #11c469;
+    --black-color: #020202;
+    --body-color: #e7f009;
+    --face-shadow: #96a001;
+    --eye-brow: #060500;
+    --eye-color: #033605;
+    --nose-color: #7a8208;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.background {
+    background-color: var(--bg-darkest-green);
+    width: 250px;
+    height: 250px;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+}
+.background .light-green,
+.background .lighter-green {
+    border-radius: 50%;
+    position: absolute;
+}
+.background .light-green {
+    background-color: var(--bg-green);
+    width: calc(100% + 100px);
+    height: calc(100% + 100px);
+    top: -170px;
+    left: -50px;
+}
+.background .lighter-green {
+    background-color: var(--bg-light-green);
+    width: calc(100% + 50px);
+    height: calc(100% + 50px);
+    top: -135px;
+    left: -25px;
+}
+.mona {
+    width: 100%;
+    height: calc(100% / 1.3);
+    position: relative;
+    top: 57.5px;
+    /* background-color: var(--black-color);*/
+}
+.mona .mona-hair {
+    height: 100%;
+    width: 95px;
+    background-color: var(--black-color);
+    border-radius: 50px;
+    margin: 0 auto;
+}
+.mona .mona-body {
+    width: 220px;
+    height: 220px;
+    background-color: var(--black-color);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -140px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.mona .mona-chest {
+    width: 85px;
+    height: 110px;
+    background-color: var(--body-color);
+    border-top-left-radius: 85%;
+    position: absolute;
+    bottom: -55px;
+    left: 10%;
+}
+.mona .mona-neck {
+    width: 40px;
+    height: calc(100% - 35px);
+    background-color: var(--body-color);
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.mona .mona-face-shadow {
+    width: 50px;
+    height: 40px;
+    background-color: var(--face-shadow);
+    position: absolute;
+    top: 94px;
+    left: 50%;
+    margin: -30px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 25px;
+    box-shadow: 0 2px 2px #a0a610;
+}
+.mona .mona-face {
+    width: 58px;
+    height: 80px;
+    background-color: var(--body-color);
+    position: absolute;
+    top: 11%;
+    left: 34.7%;
+    border-radius: 30px;
+} 
+.mona-face .mona-eyes {
+    width: 50px;
+    height: 30px;
+    margin: 0 auto;
+    transform: translateY(50%);
+}
+.mona-eyes .mona-eye {
+    width: 17px;
+    height: 7px;
+    display: inline-block;
+    margin: 18px 5px 0 0;
+    border-radius: 50%;
+    box-shadow: 0 -3px var(--eye-brow);
+}
+.mona-eyes .mona-eye:first-child {
+    margin-left: 2px;
+}
+.mona-eye .mona-eye-color {
+    width: 6.5px;
+    height: 6.5px;
+    background-color: var(--eye-color);
+    border-radius: 50%;
+    float: right;
+    margin-right: 0.2px;
+}
+.mona-face .mona-nose {
+    width: 13px;
+    height: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: var(--nose-color);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-65%);
+    top: 61%;
+    box-shadow: 0 0 3px #777;
+}
+.mona-face .mona-mouse {
+    width: 17px;
+    height: 4px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-60%);
+    top: 75%;
+    box-shadow: 0px -3px 3px var(--black-color) inset;
+}
